@@ -29,7 +29,7 @@ export default function Cart() {
       book.order_value = book.quantity * book.price;
       const res = await orderApi.addOrder(book);
       await removeFromCart(book.book_id);
-      console.log(res.data);
+      // console.log(res.data);
     } catch (error) {
       console.log(error.message);
     }
@@ -86,7 +86,7 @@ export default function Cart() {
   const fetchData = async () => {
     const _cart = await cartApi.getCartItems();
     setCart(_cart.data);
-    console.log(_cart.data);
+    // console.log(_cart.data);
   };
 
   useEffect(() => {

@@ -31,7 +31,7 @@ exports.getOrders = async (req, res) => {
     const _orders = await pool.query(query, [email]);
 
     const orders = _orders.rows;
-    // console.log(orders);
+    // // console.log(orders);
     res.json(orders);
   } catch (error) {
     console.log(error.message);

@@ -19,7 +19,7 @@ export default function SignUp() {
 
       try {
         const res = await userApi.signup(user);
-        console.log(res.data);
+        // console.log(res.data);
       } catch (error) {
         let alert = document.getElementById("error");
         alert.innerHTML = "user already exists";

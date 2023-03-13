@@ -13,8 +13,8 @@ export default function Order() {
   const toggleShow = () => setShow(!show);
   const handleCancelOrder = async (id) => {
     try {
-      console.log("delete request");
-      console.log(id);
+      // console.log("delete request");
+      // console.log(id);
       // eslint-disable-next-line
       const res = await orderApi.cancelOrder(id);
 
@@ -27,10 +27,10 @@ export default function Order() {
   const fetchData = async () => {
     try {
       const res = await orderApi.getOrders();
-      console.log(res.data);
+      // console.log(res.data);
       setOrders(res.data);
     } catch (error) {
-      console.log("login required");
+      // console.log("login required");
     }
   };
 

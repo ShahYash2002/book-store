@@ -46,7 +46,7 @@ export default function BookDetails() {
         quantity: orderQuantity,
         order_value: orderQuantity * book.price,
       };
-      console.log(order);
+      // console.log(order);
       // eslint-disable-next-line
       const res = await orderApi.addOrder(order);
       setShow(false);
@@ -60,7 +60,7 @@ export default function BookDetails() {
   };
   const fetchData = async () => {
     const _book = await bookApi.getBookById(id);
-    console.log(JSON.stringify(_book.data));
+    // console.log(JSON.stringify(_book.data));
     setBook(_book.data);
   };
 
