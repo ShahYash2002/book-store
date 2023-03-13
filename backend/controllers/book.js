@@ -5,7 +5,7 @@ exports.getBooks = async (req, res) => {
     const query = `select book_id,title,price,number_of_pages,rating,cover,(select string_agg(name,'|') from book_author where book_id=book.book_id) as authors,(select string_agg(name,'|') from book_category where book_id=book.book_id) as categories,(select count(*) > 0 from cart where book_id=book.book_id and user_id=(select user_id from users where email=$1)) as in_cart from book order by rating desc,publish_year desc`;
     const _books = await pool.query(query, [req.visitor.email]);
 
-    console.log(req.visitor);
+    // console.log(req.visitor);
     if (_books.rowCount === 0) {
       return res.status(404).json("no books available");
     }

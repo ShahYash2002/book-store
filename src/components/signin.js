@@ -9,7 +9,7 @@ export default function SignIn() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("login requested");
+    // console.log("login requested");
     const credentials = {
       email,
       password,
@@ -17,7 +17,7 @@ export default function SignIn() {
 
     try {
       const res = await userApi.signin(credentials);
-      console.log(res.data);
+      // console.log(res.data);
       localStorage.token = res.data.token;
       navigate("/");
     } catch (error) {

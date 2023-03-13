@@ -44,7 +44,7 @@ export default function Example() {
   const fetchData = async () => {
     const _books = await bookApi.getBooks();
     setBooks(_books.data);
-    console.log(_books.data);
+    // console.log(_books.data);
   };
 
   useEffect(() => {

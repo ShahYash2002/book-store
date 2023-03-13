@@ -10,7 +10,7 @@ exports.auth = (req, res, next) => {
       return res.status(400).json("authentication failed");
     }
 
-    console.log(user);
+    // console.log(user);
     req.user = user;
     next();
   } catch (error) {
